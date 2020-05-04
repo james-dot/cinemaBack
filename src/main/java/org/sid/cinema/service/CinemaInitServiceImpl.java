@@ -138,7 +138,7 @@ public class CinemaInitServiceImpl implements ICinemaInitService{
 				Film film = new Film();
 				film.setTitre(titreFilm);
 				film.setDuree(durees[new Random().nextInt(durees.length)]);//choisir aleatoirement la duree à partir du tableau des doubles
-				film.setPhoto(titreFilm.replaceAll(" ", ""));
+				film.setPhoto(titreFilm.replaceAll(" ", "")+".jpg");
 				film.setCategorie(categories.get(new Random().nextInt(categories.size())));//categorie aleatoire à partir de la liste declaré
 				filmRepository.save(film);
 		});
