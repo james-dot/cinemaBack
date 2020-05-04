@@ -29,7 +29,7 @@ public class Seance implements Serializable{
 	private Long id;
 	
 	//sepecifier format date
-	@Temporal(TemporalType.TIMESTAMP)
+	@Temporal(TemporalType.TIME)//garder juste le temps
 	private Date heureDebut;
 
 }

@@ -28,8 +28,8 @@ public class Ticket implements Serializable{
 	private String nomClient;
 	private double prix;
 	
-	@Column(unique=true)
-	private int codePayement;
+	@Column(unique=true,nullable=true)//unique mais accept valeur null
+	private Integer codePayement;//int valeur par default 0 mais Integer Null 
 	private boolean reserve;
 	
 	@ManyToOne
