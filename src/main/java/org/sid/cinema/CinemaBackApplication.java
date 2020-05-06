@@ -2,6 +2,7 @@ package org.sid.cinema;
 
 import org.sid.cinema.entities.Film;
 import org.sid.cinema.entities.Salle;
+import org.sid.cinema.entities.Ticket;
 import org.sid.cinema.service.ICinemaInitService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -24,7 +25,7 @@ public class CinemaBackApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		//inclure le id dans le resultat du recherche
-		restConfiguration.exposeIdsFor(Film.class,Salle.class);
+		restConfiguration.exposeIdsFor(Film.class,Salle.class,Ticket.class);
 			cinemaInitService.initVilles();
 			cinemaInitService.initCinemas();
 			cinemaInitService.initSalles();
